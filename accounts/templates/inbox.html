@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMTP PLAY GROUND</title>
+    <style>
+        body,html{
+            margin: 0;
+            padding: 0;
+            background-color: brown;
+            width: 100%;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            width: 50%;
+            
+            background-color: white;
+            min-width: 300px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin: 20px;
+            padding: 20px;
+        
+        }
+        .inner{
+            width: 80%;
+            
+            border: 2px solid black;
+            border-radius: 6px;
+            padding: 10px;
+            margin: 20px;
+
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+        }
+        
+       
+    </style>
+</head>
+<body>
+   <div class="container">
+       {% for i in l %}
+        <div class="inner">
+            <div class="header">
+                <div class="From">From:- {{i.from}}</div>
+                <div class="From">Date:- {{i.date}}</div>
+            </div>
+            <div class="header">
+                <div class="From">Subject:- {{i.subject}}</div>
+                
+            </div>
+            <div class="header">
+                <div class="From">{{i.message}}</div>
+                
+            </div>
+        </div>
+        {% endfor %}
+       
+    </div>
+
+
+  
+</body>
+</html>

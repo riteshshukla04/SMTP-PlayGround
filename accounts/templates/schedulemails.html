@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMTP PLAY GROUND</title>
+    <style>
+        body,html{
+            margin: 0;
+            padding: 0;
+            background-color: brown;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            width: 50%;
+            height: 90%;
+            background-color: white;
+            min-width: 300px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+        }
+        .inputbox{
+            width: 80%;
+            border-radius: 10px;
+            margin-top: 20px;
+            height: 25px;
+            margin-bottom: 20px;
+        }
+        .inputcontainer{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+
+        }
+        input:focus,
+        select:focus,
+        textarea:focus,
+        button:focus {
+            outline: none;
+        }
+        ::-webkit-input-placeholder {
+        text-align: center;
+        }
+
+        :-moz-placeholder { /* Firefox 18- */
+        text-align: center;  
+        }
+
+        ::-moz-placeholder {  /* Firefox 19+ */
+        text-align: center;  
+        }
+
+        :-ms-input-placeholder {  
+        text-align: center; 
+        }
+        .form{
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post" class="form" enctype="multipart/form-data" >
+        {% csrf_token %}
+        <div class="container">
+            <div class="inputcontainer">
+                <input type="file" class="inputbox" placeholder="Subject" name="files" accept=".csv" required>
+                 
+                <textarea  placeholder="Content" class="inputbox" style="width:80%;height:150px;" name="content"></textarea>
+    
+                
+                <input type="submit" class="inputbox" value="Send" >    
+               
+                
+            </div>
+           
+        </div>
+
+
+    </form>
+  
+</body>
+</html>
